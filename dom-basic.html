@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Basic Demo</title>
+    <style> body { font-family: system-ui, Segoe UI, Arial, sans-serif; padding: 20px; } #message { padding: 10px; border:1px solid #ccc; border-radius:6px; } </style>
+</head>
+<body>
+    <h1>DOM Basic</h1>
+    <p id="message">Click the button to change this text.</p>
+    <button onclick="sayHi()">Say Hi</button>
+
+    <script>
+        const message = document.getElementById('message');
+        function sayHi() { message.textContent = 'Hello from JavaScript!'; }
+    </script>
+</body>
+</html>
+
+

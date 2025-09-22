@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting Button</title>
+    <style> body { font-family: system-ui, Segoe UI, Arial, sans-serif; padding: 20px; } input, button { padding:8px; border-radius:6px; border:1px solid #ccc; } .row{ margin:8px 0; } </style>
+</head>
+<body>
+    <h1>Greeting Button</h1>
+    <div class="row"><input id="yourName" type="text" placeholder="Your name" /></div>
+    <div class="row"><button onclick="greet()">Say Hello</button></div>
+    <div class="row"><strong>Message:</strong> <span id="out">-</span></div>
+
+    <script>
+        function greet() {
+            var name = document.getElementById('yourName').value.trim();
+            var msg = name ? ('Hello, ' + name + '!') : 'Please enter your name.';
+            document.getElementById('out').textContent = msg;
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Basics Demo</title>
+    <style> body { font-family: system-ui, Segoe UI, Arial, sans-serif; padding: 20px; } pre { background:#1e1e1e; color:#ddd; padding:12px; border-radius:8px; overflow:auto; } </style>
+</head>
+<body>
+    <h1>JavaScript Basics</h1>
+    <button onclick="runDemo()">Run Demo</button>
+    <pre id="out"></pre>
+
+    <script>
+        function runDemo() {
+            const lines = [];
+            console.log("Hello!");
+            alert("Hi there!");
+
+            let name = "Sam";
+            let age = 18;
+            let isStudent = true;
+
+            let a = 10;
+            let b = 2;
+            let sum = a + b;
+
+            lines.push("name=" + name);
+            lines.push("age=" + age);
+            lines.push("isStudent=" + isStudent);
+            lines.push("sum=" + sum);
+            document.getElementById('out').textContent = lines.join("\n");
+        }
+    </script>
+</body>
+</html>
+
+

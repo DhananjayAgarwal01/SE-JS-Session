@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny Calculator</title>
+    <style> body { font-family: system-ui, Segoe UI, Arial, sans-serif; padding: 20px; } input, button { padding:8px; border-radius:6px; border:1px solid #ccc; } .row{ margin:8px 0; } </style>
+</head>
+<body>
+    <h1>Tiny Calculator</h1>
+    <div class="row"><input id="a" type="number" placeholder="A" /> <input id="b" type="number" placeholder="B" /></div>
+    <div class="row">
+        <button onclick="calc('+')">Add</button>
+        <button onclick="calc('-')">Subtract</button>
+        <button onclick="calc('*')">Multiply</button>
+        <button onclick="calc('/')">Divide</button>
+        <button onclick="clearOut()">Clear</button>
+    </div>
+    <div class="row"><strong>Result:</strong> <span id="out">-</span></div>
+
+    <script>
+        function calc(op) {
+            var a = parseFloat(document.getElementById('a').value) || 0;
+            var b = parseFloat(document.getElementById('b').value) || 0;
+            var r = 0;
+            if (op === '+') r = a + b;
+            else if (op === '-') r = a - b;
+            else if (op === '*') r = a * b;
+            else if (op === '/') r = b !== 0 ? a / b : 'Infinity';
+            document.getElementById('out').textContent = r;
+        }
+        function clearOut() {
+            document.getElementById('a').value = '';
+            document.getElementById('b').value = '';
+            document.getElementById('out').textContent = '-';
+        }
+    </script>
+</body>
+</html>
+
+

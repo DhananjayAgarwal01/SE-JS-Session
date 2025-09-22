@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Basics</title>
+    <style> body { font-family: system-ui, Segoe UI, Arial, sans-serif; padding: 20px; } pre { background:#1e1e1e; color:#ddd; padding:12px; border-radius:8px; overflow:auto; } </style>
+</head>
+<body>
+    <h1>JSON Basics</h1>
+    <button onclick="runDemo()">Run Demo</button>
+    <pre id="out"></pre>
+
+    <script>
+        function runDemo() {
+            let student = { name: 'Asha', age: 19 };
+            let group = ['Asha', 'Manu', 'Zara'];
+
+            let asText = JSON.stringify(student);
+            let back = JSON.parse(asText);
+
+            const lines = [];
+            lines.push('student object -> ' + asText);
+            lines.push('back to object -> name=' + back.name);
+            lines.push('group -> ' + JSON.stringify(group));
+            document.getElementById('out').textContent = lines.join('\n');
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Visual Bar</title>
+    <style>
+        body { font-family: system-ui, Segoe UI, Arial, sans-serif; padding: 20px; }
+        #bar { height: 20px; background:#36A2EB; width: 0; border-radius:6px; transition: width .4s ease; }
+    </style>
+</head>
+<body>
+    <h1>Simple Visual</h1>
+    <input id="value" type="number" placeholder="0-100" min="0" max="100" />
+    <button onclick="drawBar()">Draw</button>
+    <div id="bar" style="margin-top:10px;"></div>
+
+    <script>
+        function drawBar() {
+            var n = parseInt(document.getElementById('value').value, 10) || 0;
+            if (n < 0) n = 0; if (n > 100) n = 100;
+            document.getElementById('bar').style.width = n + '%';
+        }
+    </script>
+</body>
+</html>
+
+

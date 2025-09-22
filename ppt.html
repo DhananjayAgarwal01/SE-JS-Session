@@ -516,17 +516,13 @@ console.log("Average:", average);
                 <li><strong>Events</strong>: run code when the user clicks or types</li>
             </ul>
             <div class="code-block">
-// Get an element from the page
-const box = document.getElementById('results');<br><br>
+// Get an element by id
+const message = document.getElementById('message');<br><br>
 
-// Change the text inside it
-box.textContent = 'Hello from JavaScript!';<br><br>
-
-// React to a button click
-const btn = document.querySelector('.say-hi');
-btn.addEventListener('click', function () {
-    box.textContent = 'You clicked the button!';
-});
+// When the button is clicked, change the text
+function sayHi() {
+    message.textContent = 'Hello from JavaScript!';
+}
             </div>
             <div class="interactive-demo">
                 <h4>Live Demo: Tiny Calculator</h4>
@@ -615,18 +611,18 @@ console.log(backToObject.name);
                 <div>
                     <h3>Project Ideas:</h3>
                     <ul>
-                        <li><strong>🧮 Calculator:</strong><br>Add, subtract, multiply, divide</li>
-                        <li><strong>🗓️ To-do List:</strong><br>Add items, mark done</li>
-                        <li><strong>🎲 Number Guess:</strong><br>Guess the number 1-10</li>
+                        <li><strong>📚 Grade Tracker:</strong><br>Add marks, show average & pass/fail</li>
+                        <li><strong>📝 To‑do List:</strong><br>Add/remove items, mark done, count remaining</li>
+                        <li><strong>💰 Expense Logger:</strong><br>Add amounts, show total and max</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Requirements:</h3>
+                    <h3>Deliverables:</h3>
                     <ul>
-                        <li>Use variables and if/else</li>
-                        <li>Use a loop at least once</li>
-                        <li>One button that changes the page</li>
-                        <li>Keep it simple and working</li>
+                        <li>At least 2 screens/sections updated by buttons</li>
+                        <li>One loop to compute a total/average</li>
+                        <li>One if/else for status (e.g., pass/fail or over budget)</li>
+                        <li>Neat UI and clear instructions</li>
                     </ul>
                 </div>
             </div>
@@ -659,21 +655,21 @@ console.log(double(5)); // 10
             <h2>🎯 What to Learn Next</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                 <div>
-                    <h3>Immediate Practice:</h3>
+                    <h3>Practice After Class:</h3>
                     <ul>
-                        <li>Finish the tiny calculator</li>
-                        <li>Make a to-do list</li>
-                        <li>Try prompt/alert in different ways</li>
-                        <li>Change styles with JavaScript</li>
+                        <li>Polish your mini project (better messages, edge cases)</li>
+                        <li>Add input validation to your forms</li>
+                        <li>Try storing data in <code>localStorage</code></li>
+                        <li>Replace alerts with on‑page messages</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Advanced Topics:</h3>
+                    <h3>Roadmap:</h3>
                     <ul>
-                        <li><strong>Functions:</strong> Parameters and return</li>
-                        <li><strong>Objects:</strong> Grouping related data</li>
-                        <li><strong>Fetch:</strong> Get data from the internet</li>
-                        <li><strong>Libraries:</strong> Chart.js later, not now</li>
+                        <li><strong>Functions & Objects</strong> for cleaner code</li>
+                        <li><strong>Fetch</strong> to load real data</li>
+                        <li><strong>React preview</strong>: components, props, state</li>
+                        <li><strong>Charts</strong> later with libraries</li>
                     </ul>
                 </div>
             </div>
