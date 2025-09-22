@@ -41,22 +41,25 @@ Exercises:
 3. Password must be at least 6 characters.
 4. Confirm password must match password.
 
+## Next React Session: Glimpse
 
-## 3) React Mini-App: Color Buttons
+What you'll see next time (simple and hands-on):
+- Components: small reusable UI pieces
+- Props: inputs to components
+- State with `useState`: data that changes and re-renders the UI
+- Events: `onClick`, `onChange`
+- JSX rules: one parent element, `{}` to show values
+- Side effects preview: `useEffect` (very basic example)
 
-Goal: Build a tiny React app with four buttons: Red, Blue, Green, Yellow. When you click a button, show a message with the selected color.
+Mini-demo ideas:
+- Color buttons app (click to show selected color)
+- Counter with +1 button
+- Greeting component that shows the typed name
 
-How to run:
-- Open `react-color-buttons.html` in your browser (uses React via CDN, no install needed).
-
-What to learn:
-- useState hook to store selected color
-- Handling button clicks (onClick)
-- Rendering text based on state
-
-Try this:
-- Change the message style color to match the selected color
-- Add a Clear button that resets the selection
-- Disable the clicked button for 1 second (optional)
+How you'll run it:
+- Option A: Online playground (CodeSandbox/StackBlitz)
+- Option B: Local quick start (Vite)
+  - `npm create vite@latest my-react-app -- --template react`
+  - `cd my-react-app && npm install && npm run dev`
 
 
