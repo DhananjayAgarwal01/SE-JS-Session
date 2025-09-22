@@ -1,65 +1,57 @@
-# JavaScript Basics: DOM and Form Validation
+# JavaScript Session – Slides and Demos
 
-This short guide is for absolute beginners. Open `form-dom.html` in your browser and try the examples.
+This repo is a beginner-friendly set of slides and small HTML demos for teaching JavaScript, DOM, and a quick glimpse of React. No installation is required: open files directly in your browser.
 
-## 1) DOM (Document Object Model)
+## Contents
 
-- The DOM is the web page as a tree of elements.
-- We can select elements and change their text, HTML, styles, and attributes.
+- `ppt.html` – Interactive presentation (keyboard and button navigation)
+- Demos (open in browser):
+  - `basics.html` – variables, types, simple math
+  - `arrays-loops.html` – arrays and for-loops, average
+  - `dom-basic.html` – get element by id, change text on click
+  - `visual-bar.html` – simple bar visualization by width
+  - `json-basics.html` – stringify/parse examples
+  - `tiny-calculator.html` – add/subtract/multiply/divide
+  - `greeting-button.html` – input + greeting message
+  - `form-dom.html` – DOM basics + beginner form validation
 
-Common actions:
-- Select by id: `document.getElementById('box')`
-- Select by CSS: `document.querySelector('.item')`
-- Change text: `element.textContent = 'Hello'`
-- Change HTML: `element.innerHTML = '<b>Hi</b>'`
-- Change style: `element.style.color = 'red'`
-- Listen to events: `element.addEventListener('click', handler)`
+## How to Run
 
-Exercises:
-1. Change the text of a paragraph when a button is clicked.
-2. Toggle a CSS class on a box when a button is clicked.
-3. Create a list from an array (append `li` elements inside a `ul`).
+1) Double‑click any `.html` file to open it in your browser.
+2) For the slides, open `ppt.html`.
 
-## 2) Form Validation (Beginner)
+## Form Validation (Beginner Cheatsheet)
 
-Goal: Check user input before submitting.
-
-Basic checks:
-- Required field (not empty)
-- Email looks like an email (very simple pattern)
-- Password length (e.g., 6+ characters)
+Checklist:
+- Required fields are not empty
+- Email includes `@` and `.` (basic check)
+- Password length ≥ 6; confirm matches
 
 Steps:
-1. Listen to the form `submit` event.
-2. Stop default with `event.preventDefault()`.
-3. Read values, check them, show messages next to fields.
-4. If all good, show success.
+1. Listen to `form` submit
+2. `event.preventDefault()`
+3. Read values, validate, show messages near fields
+4. If valid, show success
 
-Exercises:
-1. Make name required.
-2. Email must contain `@` and `.`.
-3. Password must be at least 6 characters.
-4. Confirm password must match password.
+See `form-dom.html` for a working example.
 
 ## Next React Session: Glimpse
 
-What you'll see next time (simple and hands-on):
-- Components: small reusable UI pieces
-- Props: inputs to components
-- State with `useState`: data that changes and re-renders the UI
-- Events: `onClick`, `onChange`
-- JSX rules: one parent element, `{}` to show values
-- Side effects preview: `useEffect` (very basic example)
+We’ll build tiny apps using React:
+- Components (small UI pieces), Props (inputs), State (`useState`)
+- Events (`onClick`, `onChange`), JSX rules (one parent, `{}` for values)
+- Simple effect with `useEffect` demo (time permitting)
 
-Mini-demo ideas:
-- Color buttons app (click to show selected color)
-- Counter with +1 button
-- Greeting component that shows the typed name
-
-How you'll run it:
-- Option A: Online playground (CodeSandbox/StackBlitz)
-- Option B: Local quick start (Vite)
+Try ahead (optional):
+- Online: CodeSandbox or StackBlitz
+- Local (Vite):
   - `npm create vite@latest my-react-app -- --template react`
   - `cd my-react-app && npm install && npm run dev`
+
+## Troubleshooting
+
+- If a demo shows nothing, open DevTools Console (F12) and check for errors.
+- If code text overflows on a phone, convert to desktop site
+
 
 
